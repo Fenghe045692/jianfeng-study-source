@@ -1,4 +1,4 @@
-package com.sanjose.jianfeng.agile;
+package com.jianfeng.agile.sample;
 
 public class Square extends Rectangle{
 	public void setHeight(double height) {

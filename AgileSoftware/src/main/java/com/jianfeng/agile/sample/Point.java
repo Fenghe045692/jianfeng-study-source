@@ -1,4 +1,4 @@
-package com.sanjose.jianfeng.agile;
+package com.jianfeng.agile.sample;
 
 public class Point {
 	private double x;
