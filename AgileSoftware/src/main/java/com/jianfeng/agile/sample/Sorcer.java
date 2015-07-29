@@ -1,4 +1,4 @@
-package com.jianfeng.algorithm.agile;
+package com.jianfeng.agile.sample;
 
 public class Sorcer {
 	private int[] itsThrows = new int[21];
