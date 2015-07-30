@@ -1,8 +1,8 @@
-package com.jianfeng.agile.payroll.impl;
+package com.jianfeng.agile.payroll.transaction.impl;
 
-import com.jianfeng.agile.payroll.PaymentClassification;
-import com.jianfeng.agile.payroll.PaymentMethod;
-import com.jianfeng.agile.payroll.PaymentSchedule;
+import com.jianfeng.agile.payroll.model.PaymentClassification;
+import com.jianfeng.agile.payroll.transaction.PaymentMethod;
+import com.jianfeng.agile.payroll.transaction.PaymentSchedule;
 
 public class AddSalariedEmployee extends AddEmployeeTransaction{
 	private double salary;

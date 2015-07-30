@@ -1,8 +1,8 @@
 package com.jianfeng.agile.payroll.model;
 
-import com.jianfeng.agile.payroll.PaymentClassification;
-import com.jianfeng.agile.payroll.PaymentMethod;
-import com.jianfeng.agile.payroll.PaymentSchedule;
+import com.jianfeng.agile.payroll.transaction.Affiliation;
+import com.jianfeng.agile.payroll.transaction.PaymentMethod;
+import com.jianfeng.agile.payroll.transaction.PaymentSchedule;
 
 public class Employee {
 
@@ -12,6 +12,7 @@ public class Employee {
 	private PaymentClassification classification;
 	private PaymentSchedule schedule;
 	private PaymentMethod paymentMethod;
+	private Affiliation affiliation;
 	
 	public Employee(){}
 	
@@ -68,7 +69,12 @@ public class Employee {
 	public void setPaymentMethod(PaymentMethod paymentMethod) {
 		this.paymentMethod = paymentMethod;
 	}
-	
-	
 
+	public Affiliation getAffiliation() {
+		return affiliation;
+	}
+
+	public void setAffiliation(Affiliation affiliation) {
+		this.affiliation = affiliation;
+	}
 }

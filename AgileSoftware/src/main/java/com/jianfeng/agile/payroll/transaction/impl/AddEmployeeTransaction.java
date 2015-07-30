@@ -1,10 +1,10 @@
-package com.jianfeng.agile.payroll.impl;
+package com.jianfeng.agile.payroll.transaction.impl;
 
-import com.jianfeng.agile.payroll.PaymentClassification;
-import com.jianfeng.agile.payroll.PaymentMethod;
-import com.jianfeng.agile.payroll.PaymentSchedule;
-import com.jianfeng.agile.payroll.Transaction;
 import com.jianfeng.agile.payroll.model.Employee;
+import com.jianfeng.agile.payroll.model.PaymentClassification;
+import com.jianfeng.agile.payroll.transaction.PaymentMethod;
+import com.jianfeng.agile.payroll.transaction.PaymentSchedule;
+import com.jianfeng.agile.payroll.transaction.Transaction;
 import com.jianfeng.agile.payroll.util.PayrollDatabase;
 
 public abstract class AddEmployeeTransaction implements Transaction{
