@@ -1,8 +1,8 @@
 package com.jianfeng.agile.payroll.transaction.impl;
 
 import com.jianfeng.agile.payroll.model.PaymentClassification;
-import com.jianfeng.agile.payroll.transaction.PaymentMethod;
-import com.jianfeng.agile.payroll.transaction.PaymentSchedule;
+import com.jianfeng.agile.payroll.payment.PaymentMethod;
+import com.jianfeng.agile.payroll.payment.PaymentSchedule;
 
 public class AddHourlyEmployee extends AddEmployeeTransaction{
 	private double hourlyRate;
@@ -21,7 +21,6 @@ public class AddHourlyEmployee extends AddEmployeeTransaction{
 
 	@Override
 	public PaymentMethod getPaymentMethod() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 

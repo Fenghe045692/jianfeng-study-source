@@ -1,5 +1,6 @@
 package com.jianfeng.agile.payroll.transaction.impl;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -13,6 +14,12 @@ public class HourlyClassification implements PaymentClassification{
 	
 	public HourlyClassification(){}
 	
+	public HourlyClassification(double hourlyRate) {
+		super();
+		this.hourlyRate = hourlyRate;
+		this.timecards = new ArrayList<TimeCard>();
+	}
+
 	public double getHourlyRate() {
 		return hourlyRate;
 	}

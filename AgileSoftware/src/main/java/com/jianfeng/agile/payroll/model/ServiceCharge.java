@@ -23,6 +23,12 @@ public class ServiceCharge {
 	public void setAmount(double amount) {
 		this.amount = amount;
 	}
+
+	public ServiceCharge(Date date, double amount) {
+		super();
+		this.date = date;
+		this.amount = amount;
+	}
 	
 	
 }

@@ -14,6 +14,12 @@ public class CommissionedClassification implements PaymentClassification{
 	
 	public  CommissionedClassification(){}
 	
+	public CommissionedClassification(double salary, double commissionRate) {
+		super();
+		this.salary = salary;
+		this.commissionRate = commissionRate;
+	}
+
 	public double calculate(Date date) {
 		return 0;
 	}

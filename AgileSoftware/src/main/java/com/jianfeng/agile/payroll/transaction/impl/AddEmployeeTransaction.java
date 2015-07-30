@@ -2,8 +2,8 @@ package com.jianfeng.agile.payroll.transaction.impl;
 
 import com.jianfeng.agile.payroll.model.Employee;
 import com.jianfeng.agile.payroll.model.PaymentClassification;
-import com.jianfeng.agile.payroll.transaction.PaymentMethod;
-import com.jianfeng.agile.payroll.transaction.PaymentSchedule;
+import com.jianfeng.agile.payroll.payment.PaymentMethod;
+import com.jianfeng.agile.payroll.payment.PaymentSchedule;
 import com.jianfeng.agile.payroll.transaction.Transaction;
 import com.jianfeng.agile.payroll.util.PayrollDatabase;
 

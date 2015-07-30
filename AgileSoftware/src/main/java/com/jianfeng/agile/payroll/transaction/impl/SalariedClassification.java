@@ -10,6 +10,11 @@ public class SalariedClassification implements PaymentClassification{
 	
 	public SalariedClassification(){}
 	
+	public SalariedClassification(double salary) {
+		super();
+		this.salary = salary;
+	}
+
 	public double getSalary() {
 		return salary;
 	}

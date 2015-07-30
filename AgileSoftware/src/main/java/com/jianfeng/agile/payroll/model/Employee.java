@@ -1,8 +1,8 @@
 package com.jianfeng.agile.payroll.model;
 
+import com.jianfeng.agile.payroll.payment.PaymentMethod;
+import com.jianfeng.agile.payroll.payment.PaymentSchedule;
 import com.jianfeng.agile.payroll.transaction.Affiliation;
-import com.jianfeng.agile.payroll.transaction.PaymentMethod;
-import com.jianfeng.agile.payroll.transaction.PaymentSchedule;
 
 public class Employee {
 
