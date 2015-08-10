@@ -8,5 +8,6 @@
   <modules>
     <module>AgileSoftware</module>
     <module>AlgorithmSourceCode</module>
+    <module>Design-Pattern</module>
   </modules>
 </project>
