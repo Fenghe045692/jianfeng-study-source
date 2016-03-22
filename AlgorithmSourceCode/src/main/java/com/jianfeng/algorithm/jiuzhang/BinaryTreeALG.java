@@ -1,18 +1,90 @@
+
 package com.jianfeng.algorithm.jiuzhang;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 import java.util.Stack;
-
-import com.jianfeng.algorithm.jiuzhang.Recusion.TreeNode;
 
 public class BinaryTreeALG {
 
 	public static void main(String[] args) throws Exception {
 		BinaryTreeALG bt = new BinaryTreeALG();
 //		bt.testheapify();
-		bt.testconvertBSTToLinkedList();
+//		bt.testconvertBSTToLinkedList();
+		bt.testNonRecursionTraversal();
+	}
+	
+	public void testNonRecursionTraversal(){
+		TreeNode a = new TreeNode(10);
+		TreeNode b = new TreeNode(6);
+		TreeNode c = new TreeNode(14);
+		TreeNode d = new TreeNode(4);
+		TreeNode e = new TreeNode(8);
+		TreeNode f = new TreeNode(12);
+		TreeNode g = new TreeNode(16);
+		b.left = d;
+		b.right = e;
+		c.left = f;
+		c.right = g;
+		a.left = b;
+		a.right = c;
+		nonRecursionTraversal(a);
+	}
+	
+	public void nonRecursionTraversal(TreeNode root){
+		if(root == null)
+			return;
+		Stack<TreeNode> nodes = new Stack<TreeNode>();
+		Stack<TreeNode> output = new Stack<TreeNode>();
+		nodes.push(root);
+		while(!nodes.empty()){
+			TreeNode top = nodes.pop();
+			output.push(top);
+			if(top.left != null)
+				nodes.push(top.left);
+			if(top.right != null)
+				nodes.push(top.right);
+		}
+		while(!output.empty()){
+			System.out.print(output.pop().val + " ");
+		}
+	}
+	
+	private List<TreeNode> getPath2Root(TreeNode node){
+		List<TreeNode> path = new ArrayList<TreeNode>();
+		while(node != null){
+			path.add(node);
+			node = node.parent;
+		}
+		return path;
+	}
+	public TreeNode getNextBiggerII(TreeNode node1, TreeNode node2){
+		List<TreeNode> path1 = getPath2Root(node1);
+		List<TreeNode> path2 = getPath2Root(node2);
+		int i, j;
+		for(i = path1.size() - 1, j = path2.size() - 1; i >=0 && j>= 0; i--,j--){
+			if(path1.get(i).val != path2.get(j).val){
+				return path1.get(i).parent;
+			}
+		}
+		return path1.get(i+1);
+	}
+	
+	public TreeNode getNextBigger(TreeNode node){
+		if(node.right != null){
+	        node = node.right;
+	        while(node.left != null);
+	            node = node.left;
+	        return node;
+		}
+	    while(node.parent != null){
+	        if(node.parent.left == node)
+	            return node.parent;
+	        node = node.parent;
+	    }
+	    return null;
 	}
 
 	public void testconvertBSTToLinkedList() {
@@ -518,6 +590,7 @@ public class BinaryTreeALG {
 	public class TreeNode {
 		public int val;
 		public TreeNode left, right;
+		public TreeNode parent;
 
 		public TreeNode(int val) {
 			this.val = val;

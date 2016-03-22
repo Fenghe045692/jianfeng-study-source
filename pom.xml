@@ -9,5 +9,6 @@
     <module>AgileSoftware</module>
     <module>AlgorithmSourceCode</module>
     <module>Design-Pattern</module>
+    <module>JavaTutorial</module>
   </modules>
 </project>
